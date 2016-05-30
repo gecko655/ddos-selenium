@@ -5,7 +5,7 @@ logger = Logger.new(STDOUT)
 
 hostname = ENV["Hostserver_Hostname"]
 raise ArgumentError "usage: ruby #{$0} url" unless ARGV[0]
-url = $0
+url = ARGV[0]
 
 logger.info("Initializing")
 driver = Selenium::WebDriver.for :remote, :url => "http://"+hostname+":4444/wd/hub", :desired_capabilities => :chrome
