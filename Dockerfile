@@ -20,4 +20,4 @@ RUN (crontab -l; cat crontab.config ) | crontab
 
 COPY main.rb /root
 
-CMD cron && tail -f /tmp/cronlog.log
+CMD env > /root/env.txt && cron && tail -f /tmp/cronlog.log
