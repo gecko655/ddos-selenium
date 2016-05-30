@@ -4,7 +4,7 @@ require 'logger'
 logger = Logger.new(STDOUT)
 
 hostname = ENV["Hostserver_Hostname"]
-raise ArgumentError "usage: ruby #{$0} url" unless ARGV[0]
+raise ArgumentError, "usage: ruby #{$0} url" unless ARGV[0]
 url = ARGV[0]
 
 logger.info("Initializing")
